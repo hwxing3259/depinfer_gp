@@ -1,4 +1,15 @@
 library(LaplacesDemon)
+library(DepInfeR)
+library(missForest)
+library(tidyverse)
+library(glmnet)
+library(BiocParallel)
+library(matrixStats)
+library(randomForestSRC)
+library(ggplot2)
+library(ggtext)
+library(doParallel)
+library(foreach)
 
 # here we define functions used our collapsed Gibbs sampler
 log_prior_z <- function(z, inclusion_prob){
