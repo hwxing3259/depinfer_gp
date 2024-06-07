@@ -26,8 +26,11 @@ MCMC_CV <- CV_nu_par_0(N=N, burn_in=burn_in, thin=thin, X=GP_X, Y=GP_Y,
 
 ## Reproducing numerical examples
 Codes for reproducing the BeatAML ([Batzilla et al 2022](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9436053/)) example: [Link](https://github.com/hwxing3259/depinfer_gp/blob/main/CV_BeatAML.R)
+
 Codes for reproducing the EMBL ([Batzilla et al 2022](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9436053/)) example: [Link](https://github.com/hwxing3259/depinfer_gp/blob/main/CV_EMBL.R)
+
 Codes for reproducing the GDSC1 ([Batzilla et al 2022](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9436053/)) example: [Link](https://github.com/hwxing3259/depinfer_gp/blob/main/CV_GDSC1.R)
+
 Codes for reproducing figures in our paper: [Link1](https://github.com/hwxing3259), [Link2](https://github.com/hwxing3259)
 
 ## Cite us
@@ -43,9 +46,3 @@ Codes for reproducing figures in our paper: [Link1](https://github.com/hwxing325
   publisher={Springer}
 }
 ```
-
-my_helper_funcs.R --> Helper functions for e.g. MCMC sampler and cross validation 
-
-CV_GDSC1.R, CV_beatAML.R, CV_EMBL.R  --> Applying the proposed model to three real datasets 
-
-examles_and_figures_1,2.R --> generate figures presented in the paper
