@@ -4,8 +4,23 @@ This repository hosts the implementation of DepInfeR-GP [(link)](https://bmcbioi
 <p align="center"><img src="https://github.com/hwxing3259/depinfer_gp/blob/main/depinfer_gp_graphical.png" alt="depinfer-gp" width="900px" /></p>
 
 ## Core API Interface
+Here we use the BeatAML dataset as an example
 ```
+source("depinfer_gp.R")
+set.seed(31415926)
+# load the beatAML dataset from Batzilla et al
+load("beatAML_dataset.RData")
 
+N <- 200 # number of MCMC steps, each step consists of thin times Gibbs update
+burn_in<-50 # discard the first burn_in number of samples, results would have lenth = N-burn_in
+thin<-2 # number of Gibbs updates in each MCMC step
+
+GP_X <- tarMat_BeatAML
+GP_X[GP_X==GP_X[1,1]] <- NA
+GP_Y <- viabMat_BeatAML_raw_log
+
+MCMC_CV <- CV_nu_par_0(N=N, burn_in=burn_in, thin=thin, X=GP_X, Y=GP_Y, 
+                       vec_nu_1=seq(0.01, 0.3, length.out=5), vec_nu_2=seq(0.01, 0.3, length.out=6), inclusion_prob=.1, back_fit_iter=20, k_fold=3, ncor=10)
 ```
 
 ## Reproducing numerical examples
