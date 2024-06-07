@@ -23,6 +23,7 @@ MCMC_CV <- CV_nu_par_0(N=N, burn_in=burn_in, thin=thin, X=GP_X, Y=GP_Y,
                        vec_nu_1=seq(0.01, 0.3, length.out=5), vec_nu_2=seq(0.01, 0.3, length.out=6),
                        inclusion_prob=.1, back_fit_iter=20, k_fold=3, ncor=10)
 ```
+The results would be MCMC samples under the optimal combination of GP hyperparameters selected by cross validation.
 
 ## Reproducing numerical examples
 Codes for reproducing the BeatAML ([Batzilla et al 2022](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9436053/)) example: [Link](https://github.com/hwxing3259/depinfer_gp/blob/main/numerical_examples/CV_BeatAML.R)
