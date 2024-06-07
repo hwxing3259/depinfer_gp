@@ -9,7 +9,7 @@ Here we use the BeatAML dataset from [Batzilla et al 2022](https://www.ncbi.nlm.
 source("depinfer_gp.R")
 set.seed(31415926)
 # load the beatAML dataset from Batzilla et al 2022.
-load("beatAML_dataset.RData")
+load("./datasets/beatAML_dataset.RData")
 
 N <- 200 # number of MCMC steps, each step consists of thin times Gibbs update
 burn_in<-50 # discard the first burn_in number of samples, results would have lenth = N-burn_in
@@ -25,13 +25,13 @@ MCMC_CV <- CV_nu_par_0(N=N, burn_in=burn_in, thin=thin, X=GP_X, Y=GP_Y,
 ```
 
 ## Reproducing numerical examples
-Codes for reproducing the BeatAML ([Batzilla et al 2022](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9436053/)) example: [Link](https://github.com/hwxing3259/depinfer_gp/blob/main/CV_BeatAML.R)
+Codes for reproducing the BeatAML ([Batzilla et al 2022](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9436053/)) example: [Link](https://github.com/hwxing3259/depinfer_gp/blob/main/numerical_examples/CV_BeatAML.R)
 
-Codes for reproducing the EMBL ([Batzilla et al 2022](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9436053/)) example: [Link](https://github.com/hwxing3259/depinfer_gp/blob/main/CV_EMBL.R)
+Codes for reproducing the EMBL ([Batzilla et al 2022](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9436053/)) example: [Link](https://github.com/hwxing3259/depinfer_gp/blob/main/numerical_examples/CV_EMBL.R)
 
-Codes for reproducing the GDSC1 ([Batzilla et al 2022](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9436053/)) example: [Link](https://github.com/hwxing3259/depinfer_gp/blob/main/CV_GDSC1.R)
+Codes for reproducing the GDSC1 ([Batzilla et al 2022](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9436053/)) example: [Link](https://github.com/hwxing3259/depinfer_gp/blob/main/numerical_examples/CV_GDSC1.R)
 
-Codes for reproducing figures in our paper: [Link1](https://github.com/hwxing3259), [Link2](https://github.com/hwxing3259)
+Codes for reproducing figures in our paper: [Link1](https://github.com/hwxing3259/depinfer_gp/blob/main/datasets/examles_and_figures_1.R), [Link2](https://github.com/hwxing3259/depinfer_gp/blob/main/datasets/examles_and_figures_2.R)
 
 ## Cite us
 ```
